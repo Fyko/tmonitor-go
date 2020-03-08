@@ -1,0 +1,62 @@
+{
+	"name": "twitter-monitor",
+	"version": "1.0.0",
+	"description": "a program to add roles to users over a timed basis.",
+	"main": "dist/index.js",
+	"scripts": {
+		"lint": "eslint src --ext .ts",
+		"lint:fix": "eslint src --fix --ext .ts",
+		"cleardir": "rimraf dist/*",
+		"compile": "tsc",
+		"build": "pnpm run cleardir && pnpm run compile",
+		"start": "pnpm run build && node ."
+	},
+	"author": "Carter Himmel <fyko@sycer.dev>",
+	"license": "GPL-3.0",
+	"dependencies": {
+		"common-tags": "^1.8.0",
+		"discord-akairo": "github:discord-akairo/discord-akairo#master",
+		"discord.js": "github:almostSouji/discord.js#d5b8df96cf69987f951174a28039fc8dd17a4a53",
+		"mongoose": "^5.9.2",
+		"ms": "^2.1.2",
+		"node-fetch": "^2.6.0",
+		"oauth-authorization-header": "^0.0.7",
+		"pretty-ms": "^6.0.0",
+		"signale": "^1.4.0",
+		"tesseract.js": "^2.0.2",
+		"twit": "^2.2.11",
+		"twitter-text": "^3.0.1",
+		"winston": "^3.2.1"
+	},
+	"devDependencies": {
+		"@types/common-tags": "^1.8.0",
+		"@types/mongoose": "^5.7.3",
+		"@types/ms": "^0.7.31",
+		"@types/node": "^13.7.7",
+		"@types/node-fetch": "^2.5.5",
+		"@types/signale": "^1.2.1",
+		"@types/twit": "^2.2.23",
+		"@types/twitter-text": "^2.0.0",
+		"@types/ws": "^7.2.2",
+		"@typescript-eslint/eslint-plugin": "^2.21.0",
+		"@typescript-eslint/parser": "^2.21.0",
+		"dotenv": "^8.2.0",
+		"eslint": "^6.8.0",
+		"eslint-config-marine": "^6.0.0",
+		"eslint-config-prettier": "^6.10.0",
+		"eslint-plugin-prettier": "^3.1.2",
+		"prettier": "^1.19.1",
+		"rimraf": "^3.0.2",
+		"tslib": "^1.11.1",
+		"typescript": "^3.8.3"
+	},
+	"optionalDependencies": {
+		"bufferutil": "^4.0.1",
+		"erlpack": "github:discordapp/erlpack",
+		"utf-8-validate": "^5.0.2",
+		"zlib-sync": "^0.1.6"
+	},
+	"eslintConfig": {
+		"extends": "marine/prettier/node"
+	}
+}
